@@ -13,7 +13,7 @@ public class Block implements Figure {
     }
 
     @Override
-    public Cell[] way(Cell dest) {
+    public Cell[] way(Cell source, Cell dest) {//edited
         return new Cell[0];
     }
 
