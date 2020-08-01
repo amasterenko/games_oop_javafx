@@ -4,11 +4,13 @@ public class Win {
     public static boolean check(int[][] board) {
         boolean rsl = true;
         //find diagonal element equal to 1
-        for(int diagIndx = 0; diagIndx < board.length; diagIndx++){
-            if(board[diagIndx][diagIndx] == 1) {
+        for (int diagIndx = 0; diagIndx < board.length; diagIndx++) {
+            if (board[diagIndx][diagIndx] == 1) {
                 //check if the column and the row with found index contains all elements equal to 1
                 rsl = checkColumn(board, diagIndx) || checkRow(board, diagIndx);
-                if(rsl) {break;}
+                if (rsl) {
+                    break;
+                }
             }
         }
         return rsl;
@@ -17,17 +19,18 @@ public class Win {
     private static boolean checkColumn(int[][] array, int column) {
         boolean rsl = true;
         for (int j = 0; j < array.length; j++) {
-            if(array[column][j]!=1) {
+            if (array[column][j] != 1) {
                 rsl = false;
                 break;
             }
         }
         return rsl;
     }
+
     private static boolean checkRow(int[][] array, int row) {
         boolean rsl = true;
         for (int i = 0; i < array.length; i++) {
-            if(array[i][row]!=1) {
+            if (array[i][row] != 1) {
                 rsl = false;
                 break;
             }
