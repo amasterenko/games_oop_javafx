@@ -8,6 +8,7 @@ public class Win {
             if(board[diagIndx][diagIndx] == 1) {
                 //check if the column and the row with found index contains all elements equal to 1
                 rsl = checkColumn(board, diagIndx) || checkRow(board, diagIndx);
+                if(rsl) {break;}
             }
         }
         return rsl;
